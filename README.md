@@ -1,6 +1,6 @@
 # newegg-stock-checker
 
-A simple script to check newegg stock for an item at variable times.
+A simple script to check newegg stock for an item at variable times then send a notification to a discord webhook
 
 # Setup
 
