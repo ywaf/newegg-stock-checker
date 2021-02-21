@@ -5,9 +5,9 @@ import requests
 import datetime
 from bs4 import *
 
-webhook = "PUT WEBHOOK URL HERE" # put webhook url here
+webhook = "WEBHOOK URL"  # put webhook url here
 
-intervals = int(10) # how long it will wait after checking
+intervals = int(10)  # how long it will wait after checking
 
 print('''
  ________   _______   ___       __   _______   ________  ________          ________  _________  ________  ________  ___  __           
@@ -37,7 +37,13 @@ print("Made By Leho | github.com/lehoooo\n\n\n\n")
 itemurl = input("Enter The Newegg URL: ")
 
 while True:
-    urlreq = requests.get(itemurl)
+    try:
+        if not itemurl.startswith("https://www.newegg.com/"):
+            raise Exception("not newegg url")
+        urlreq = requests.get(itemurl)
+    except:
+        print("Unable to access URL")
+        exit()
 
     soup = BeautifulSoup(urlreq.text, 'html.parser')
 
@@ -94,12 +100,16 @@ while True:
     }
 
     if "OUT OF STOCK.</strong>" in urlreq.text:
+        print("-----------------------------------------------------")
         print("Currently out of stock")
         print("Checked At: " + timenow)
+        print("-----------------------------------------------------")
         r = requests.post(webhook, data=json.dumps(outofstock), headers={'Content-Type': 'application/json'})
     elif "In stock.</strong>" in urlreq.text:
+        print("-----------------------------------------------------")
         print("Currently in stock!")
         print("Checked At: " + timenow)
+        print("-----------------------------------------------------")
         r = requests.post(webhook, data=json.dumps(instock), headers={'Content-Type': 'application/json'})
 
     elif "Are you a human?" in urlreq.text:
@@ -107,3 +117,4 @@ while True:
 
     print("waiting " + str(intervals) + " mins until runnning again")
     time.sleep(intervals * 60)
+
