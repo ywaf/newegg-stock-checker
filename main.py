@@ -54,6 +54,7 @@ while True:
     timenow = x.strftime("%x %X")
 
     instock = {
+        "content": "@everyone",
         "embeds": [{
             "author": {
                 "name": "Newegg Stock Checker | Made By Lehoooo",
