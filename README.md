@@ -16,6 +16,6 @@ Change the webhook URL and interval time (minutes) in ``` main.py ``` to your ow
 
 Install Command
 
-``` pip3 install bs4 requests os time ```
+``` pip3 install bs4 requests ```
 or
-``` pip install bs4 requests os time ```
+``` pip install bs4 requests ```
