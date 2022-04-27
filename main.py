@@ -58,19 +58,19 @@ while True:
         "embeds": [{
             "author": {
                 "name": "Newegg Stock Checker | Made By Lehoooo",
-                "url": "https://github.com/lehoooo",
+                "url": "https://github.com/lehoooo"
             },
             "footer": {
-                "text": "Time: " + timenow,
+                "text": "Time: " + timenow
             },
             "title": "In Stock!",
             "description": title + " Is In stock right now!",
-            "color": "65331",
+            "color": "65331"
         },
             {
                 "title": "Link",
                 "url": itemurl,
-                "color": "65331",
+                "color": "65331"
 
             }
 
@@ -81,19 +81,19 @@ while True:
         "embeds": [{
             "author": {
                 "name": "Newegg Stock Checker | Made By Lehoooo",
-                "url": "https://github.com/lehoooo",
+                "url": "https://github.com/lehoooo"
             },
             "footer": {
-                "text": "Time: " + timenow,
+                "text": "Time: " + timenow
             },
             "title": "Out Of Stock",
             "description": title + " Is out of stock right now!",
-            "color": "16711680",
+            "color": "16711680"
         },
             {
                 "title": "Link",
                 "url": itemurl,
-                "color": "16711680",
+                "color": "16711680"
 
             }
 
