@@ -1,3 +1,6 @@
+## UPDATE
+might not work in 2022 because of neweggs increased bot protection.
+
 # newegg-stock-checker
 
 A simple script to check newegg stock for an item at variable times then send a notification to a discord webhook
